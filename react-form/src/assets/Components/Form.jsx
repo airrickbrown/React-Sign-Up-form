@@ -5,6 +5,27 @@ function Form() {
    const [name, setName] =useState("")
    const [email, setEmail] = useState("")
    const [password, setPassword] = useState("")
+
+   const handleNameSubmit = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailSubmit = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordSubmit = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ Name: name, Email: email, Password: password });
+    setName("");
+    setEmail("");
+    setPassword("");
+
+  }
   
     
   return (
